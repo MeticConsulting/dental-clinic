@@ -1,0 +1,1725 @@
+:root {
+    --colorOne: rgb(211,211,211);
+    --colorTwo: rgb(255,255,255);
+    --colorThree: #127486;
+    --colorFour: rgb(116,128,124);
+    --colorFive: #292929;
+    --colorSix: rgb(207,216,218);
+    --colorSeven: #4A4F52;
+    --colorEight: rgb(0,103,124);
+    --colorNine: rgb(0,139,160);
+    --colorTen: #0C4E59;
+    --colorEleven: #00909D;
+    --colorTwelve: #0B647A;
+    --colorThirteen: rgb(0,198,253);
+    --colorFourteen: rgb(0,227,209);
+    --colorFifteen: rgb(34,230,167);
+    --colorSixteen: rgb(51,151,167);
+    --colorSeventeen: rgb(0,89,109);
+    --colorEighteen: #19BFD1;
+    --colorNineteen: rgb(242,247,248);
+    --colorTwenty: rgb(221,235,241);
+}
+
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+   clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Arimo";
+    font-family: "Fira Sans";
+}
+
+
+/******************************************
+/* Header section
+/*******************************************/
+
+.top-header {
+    max-width: 1200px;
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 0;
+}
+
+.top-header-box-1 {
+    width: 100%;
+    max-width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--colorOne);
+}
+
+.top-header-box-1 a{
+    color: var(--colorThree);
+    font-size: 2.1rem;
+    text-decoration: none;
+}
+
+.top-header-box-1 a:hover {
+    color: var(--colorFour);
+    transition: .3s ease-in-out;
+}
+
+.top-header-box-2 {
+    width: 100%;
+    max-width: 60%;
+    border-right: 1px solid var(--colorOne);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: var(--colorFive);
+    font-size: 1.6rem;
+}
+
+.top-header-box-3 {
+    width: 100%;
+    max-width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    gap: 15px;
+    padding-left: 20px;
+}
+
+.ionicon {
+    color: var(--colorSix);
+    color: #71A1AE;
+    font-size: 2rem;
+}
+
+.ionicon:hover {
+    color: var(--colorEleven);
+}
+
+#header-toggle-btn {
+    display: block;
+    width: 100%;
+    border: none;
+    color: var(--colorFour);
+    border-top: 1px solid var(--colorOne);
+    background: var(--colorTwo);
+    padding: 10px;
+    display: none;
+    z-index: 2;
+    opacity: 1;
+}
+
+
+/******************************************
+/* NAV section
+/*******************************************/
+
+.navigation-header {
+    width: 100%;
+    height: 120px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    position: sticky;
+    top: 0;
+    background: var(--colorTwo);
+    z-index: 2;
+}
+
+.navigation {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--colorOne);
+}
+
+.nav-logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+}
+
+.nav-menu {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: var(--colorSeven);
+}
+
+.nav-menu a:hover {
+    color: var(--colorThree);
+}
+
+.nav-menu .active {
+    color: var(--colorThree);
+}
+
+.nav-menu .nav-list-btn {
+    background-image: linear-gradient(var(--colorEight), var(--colorNine));
+    padding: 15px 20px;
+    border-radius: 100px;
+    color: var(--colorTwo);
+    font-family: "Arimo";
+    transition: .3s ease-in-out;
+}
+
+.nav-menu .nav-list-btn:hover {
+    background-image: linear-gradient( to top, var(--colorEight), var(--colorNine));
+    color: var(--colorTwo);
+}
+
+.hamburger, .close-hamburger{
+    display: none;
+}
+
+/******************************************
+/* Hero section
+/*******************************************/
+
+.hero-section {
+    min-height: 75vh;
+    background: url(../images/hero-bg1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.hero-section > div {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.hero-section > div h1 {
+    font-size: 8.5rem;
+    max-width: 638px;
+    font-weight: 200;
+    color: var(--colorTen);
+}
+
+.hero-section > div h2 {
+    font-size: 3.6rem;
+    max-width: 638px;
+    font-weight: 200;
+    color: var(--colorEleven);
+    margin-bottom: 60px;
+}
+
+.hero-section > div a {
+    font-family: "Arimo";
+    font-size: 1.5rem;
+    max-width: 638px;
+    font-weight: 700;
+    color: var(--colorTwelve);
+    text-decoration: none;
+    background: var(--colorTwo);
+    padding: 20px 40px;
+    border-radius: 100px;
+    outline: none;
+    transition: .3s ease-in-out;
+}
+
+.hero-section > div a:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  background: none;
+  border: 2px solid var(--colorTwo);
+  color: var(--colorTwo);
+}
+
+/******************************************
+/* big section
+/*******************************************/
+
+.big-section {
+    width: 100%;
+    background-image: linear-gradient(rgb(0,84,106), rgb(0,158,174));
+}
+
+.big-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 100px 0;
+}
+
+.big-section article {
+    width: 100%;
+    max-width: 357px;
+    height: 408px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    background-image: linear-gradient(rgb(0,101,121), rgb(0,129,148));
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: var(--colorTwo);
+    padding: 36px;
+    text-align: center;
+}
+
+.big-section .icon1 {
+    font-size: 5.8rem;
+    color: var(--colorThirteen);
+}
+
+.big-section .icon2 {
+    font-size: 5.8rem;
+    color: var(--colorFourteen);
+}
+
+.big-section .icon3 {
+    font-size: 5.8rem;
+    color: var(--colorFifteen);
+}
+
+.big-section article h3 {
+    font-size: 3.6rem;
+    font-weight: 200;
+}
+
+.big-section article p {
+    font-size: 1.6rem;
+    font-weight: 200;
+    line-height: 2.8rem;
+}
+
+.big-section article a {
+    font-size: 1.2rem;
+    padding: 10px;
+    color: var(--colorTwo);
+    font-family: "Arimo";
+    background: var(--colorSixteen);
+    border-radius: 100px;
+    text-decoration: none;
+}
+
+.big-section article a:hover {
+    color: var(--colorSeventeen);
+    background: var(--colorTwo);
+}
+
+/******************************************
+/* Appointment section
+/*******************************************/
+
+.appointment-section {
+    background: var(--colorSeventeen);
+    width: 100%;
+    padding: 40px 0px;
+}
+
+.appointment-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.appointment-box {
+    width: 100%;
+    max-width: 565px;
+    min-height: 458px;
+    padding: 39px 180px 39px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.appointment-form {
+    width: 100%;
+    max-width: 565px;
+    min-height: 383px;
+    padding: 39.53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--colorNineteen);
+    border-radius: 20px;
+}
+
+.appointment-box h4 {
+    font-size: 2.2rem;
+    font-weight: 200;
+    color: var(--colorEighteen);
+}
+
+.appointment-box h2 {
+    font-size: 3.8rem;
+    font-weight: 200;
+    color: var(--colorTwo);
+}
+
+.appointment-box p {
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--colorTwo);
+}
+
+.form-box {
+    width: 100%;
+    max-width: 565px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-box input {
+    background: var(--colorTwo);
+    width: 236.5px;
+    height: 46px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: 1px solid var(--colorOne);
+    color: var(--colorOne);
+}
+
+.form-box input::placeholder{
+    color: var(--colorOne);
+}
+
+.form-box select {
+    background: var(--colorTwo);
+    width: 236.5px;
+    height: 46px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: 1px solid var(--colorOne);
+    color: var(--colorSeven);
+    font-weight: 400;
+}
+
+.form-box .submit-btn {
+    background-image: linear-gradient(var(--colorEight), var(--colorNine));
+    width: 161.8px;
+    height: 40px;
+    padding: 0px 30px;
+    border-radius: 100px;
+    color: var(--colorTwo);
+    transition: .3s ease-in-out;
+}
+
+.form-box .submit-btn:hover {
+    background-image: linear-gradient( to top, var(--colorEight), var(--colorNine));
+    color: var(--colorTwo);
+}
+
+#date-input::placeholder {
+    color: var(--colorSeven);
+}
+/******************************************
+/* Services section
+/*******************************************/
+
+.services-section {
+    width: 100%;
+    min-height: 436px;
+    background: rgb(229,237,242);
+}
+
+.services-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.services-container section {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.services-container section img {
+   width: 15.0rem;
+}
+
+.services-container section h3 {
+   font-size: 3.2rem;
+   font-weight: 200;
+}
+
+.service-h3-1 {
+    color: #32A8C9;
+}
+
+.service-h3-2 {
+    color: #22A8B5;
+}
+
+.service-h3-3 {
+    color: #20B599;
+}
+
+.service-h3-4 {
+    color: #3BBA78;
+}
+
+.services-container section  p {
+    font-size: 1.6rem;
+    font-family: "Arimo";
+    line-height: 2.2rem;
+    font-weight: 200;
+}
+
+/******************************************
+/* About section
+/*******************************************/
+
+.about-section {
+    width: 100%;
+    height: 640px;
+    display: flex;
+    background: rgb(242,248,254);
+}
+
+.about-section section {
+    width: 50%;
+    height: 100%;
+    background-image: url(../images/dental-dentists.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.about-section article {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 75px;
+}
+
+.about-section article div {
+    width: 100%;
+    max-width: 488.11px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.about-section article h2 {
+    color: #0A6076;
+    font-size: 2.2rem;
+    font-weight: 200;
+    padding-bottom: 20px;
+}
+
+.about-section article h3 {
+    color: #292834;
+    font-size: 3.8rem;
+    font-weight: 200;
+    padding-bottom: 40px;
+}
+
+
+.about-section article p {
+    color: #47535C;
+    font-size: 2.0rem;
+    font-weight: 200;
+    padding-bottom: 20px;
+}
+
+.about-section article p + p {
+    padding-bottom: 40px;
+}
+
+.about-section article a {
+    display: block;
+    width: fit-content;
+    background-image: linear-gradient(var(--colorEight), var(--colorNine));
+    padding: 15px 38px;
+    font-size: 1.2rem;
+    font-family: "Arimo";
+    border-radius: 100px;
+    text-decoration: none;
+    color: var(--colorTwo);
+    transition: .3s ease-in-out;
+    margin-top: 30px;
+}
+.about-section article a:hover {
+    background-image: linear-gradient( to top, var(--colorEight), var(--colorNine));
+    color: var(--colorTwo);
+}
+
+/******************************************
+/* Review section
+/*******************************************/
+
+.review-section {
+    width: 100%;
+    height: 347px;
+    background: rgb(245,250,253);
+    color: var(--colorSeven);
+}
+
+.review-container {
+    width: 100%;
+    max-width: 1269px;
+    margin: auto;
+    padding-top: 60px;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.review-container article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.review-container  article p{
+    font-size: 2.8rem;
+    font-family: "Arimo";
+    line-height: 4.2rem;
+    font-weight: 200;
+    padding: 0 100px;
+}
+
+.review-container  article span{
+    font-size: 2.0rem;
+    font-weight: 200;
+}
+
+.review-container article span + span{
+    font-size: 1.4rem;
+    font-weight: 200;
+}
+
+/******************************************
+/* Patient Care Section
+/*******************************************/
+
+.patient-care-section {
+    width: 100%;
+    height: 200px;
+    background: rgb(245,250,253);
+}
+
+.patient-care-section h2 {
+    color: #1A1C22;
+    font-size: 3.8rem;
+    font-weight: 200;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.patient-care-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.swiper-slide div {
+    width: 100%;
+    max-width: 367px;
+    height: 259.42px;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.swiper-slide div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide h4 {
+    font-size: 2.2rem;
+    font-weight: 200;
+    color: var(--colorTwo);
+}
+
+/******************************************
+/* Meet Drs section
+/*******************************************/
+
+.meet-drs-section {
+    width: 100%;
+    background-image: linear-gradient(rgb(0,84,106), rgb(0,158,174));
+    height: 900px;
+}
+
+.meet-drs-section  h2 {
+    color: var(--colorTwo);
+    font-size: 3.8rem;
+    font-weight: 200;
+    text-align: center;
+    padding: 240px 0 60px 0;
+}
+
+.meet-drs-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.meet-drs-container  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.meet-drs-container  article img {
+    border-radius: 100px;
+}
+
+.meet-drs-container  article h4 {
+    color: var(--colorTwo);
+    font-weight: 200;
+    font-size: 2.6rem;
+    padding-top: 20px;
+}
+
+.meet-drs-container  article span {
+    color: #5BFDDD;
+    font-weight: 200;
+    font-size: 1.6rem;
+}
+
+.meet-drs-container  article p {
+    color: var(--colorTwo);
+    font-weight: 200;
+    font-family: "Arimo";
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 256px;
+}
+
+.meet-drs-section > a {
+    color: var(--colorTwo);
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 50px;
+    font-family: "Arimo";
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 20px;
+    background: #ffffff4D;
+    border-radius: 20px;
+}
+
+.meet-drs-section > a:hover {
+    color: var(--colorEleven);
+    background: #ffffff;
+}
+
+/******************************************
+/* Sign In section
+/*******************************************/
+
+.sign-in-section {
+    width: 100%;
+    height: 669px;
+    background: rgb(232,237,241);
+    display: flex;
+}
+
+.sign-in-article {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 75px;
+}
+
+.sign-in-article  > div {
+    width: 100%;
+    max-width: 564.89px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sign-in-article > div h2 {
+    color: #292834;
+    font-size: 3.6rem;
+    font-weight: 200;
+    padding-bottom: 20px;
+}
+
+.sign-in-article > div p {
+    color: #292834;
+    font-family: "Arimo";
+    font-size: 2.0rem;
+    font-weight: 200;
+    padding-bottom: 20px;
+}
+
+.form-container {
+    outline: none;
+    border: 1px solid var(--colorOne);
+    background: var(--colorTwo);
+    font-size: 1.6rem;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 457.75px;
+    border-radius: 100px;
+}
+
+.form-container .email-input {
+    outline: none;
+    border: none;
+    padding: 9px 18px;
+    width: 100%;
+    max-width: 70%;
+}
+
+.form-container .submit-btn {
+    padding: 9px 36px;
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    background-image: linear-gradient(var(--colorEight), var(--colorNine));
+    color: var(--colorTwo);
+}
+
+.form-container .submit-btn:hover {
+    background-image: linear-gradient( to top, var(--colorEight), var(--colorNine));
+    color: var(--colorTwo);
+}
+
+.sign-in-article div form + p {
+    color: #787D7F;
+    font-size: 1.6rem;
+    font-weight: 200;
+    margin-top: 20px;
+}
+
+.sign-in-section section {
+    width: 50%;
+    height: 100%;
+    background-image: url(../images/dental-signin-bg.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/******************************************
+/* Latest News section
+/*******************************************/
+
+.latest-news-section {
+    width: 100%;
+    height: 800px;
+    background: var(--colorTwo);
+}
+
+.latest-news-section h2 {
+    font-size: 3.8rem;
+    font-weight: 200;
+    color: #1C1E24;
+    text-align: center;
+    padding: 120px 0 60px 0;
+}
+
+.latest-news-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.latest-news-container article {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.latest-news-container img{
+    padding: 20px;
+}
+
+.latest-news-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.latest-news-box span{
+    color: #828C92;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.latest-news-box a {
+    color: #1B1E29;
+    font-size: 2.6rem;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+.latest-news-box p {
+    color: #4A4F52;
+    font-family: "Arimo";
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+/******************************************
+/* Appointment section
+/*******************************************/
+
+.appointments-section {
+    width: 100%;
+    height: 155px;
+    padding: 60px 0;
+    background: linear-gradient(to right, rgb(92,166,227), rgb(93,199,196));
+    color: var(--colorTwo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appointments-section div {
+    max-width: 1200px;
+}
+
+.appointments-section div h3 {
+    font-size: 2.8rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.appointments-section div a {
+    font-size: 2.8rem;
+    font-weight: 200;
+    text-align: center;
+    color: var(--colorTwo);
+    text-decoration: underline;
+}
+/******************************************
+/* Contacts section
+/*******************************************/
+
+.contacts-section {
+    width: 100%;
+    height: 400px;
+    background: url(../images/dental-contacts-bg.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-section section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.contacts-section section div {
+    padding: 70px 0;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts-section section div  h3{
+    font-size: 2.4rem;
+    font-weight: 200;
+    color: var(--colorTwo);
+    padding-bottom: 40px;
+}
+
+.contacts-section section div a{
+    font-size: 2.0rem;
+    font-weight: 200;
+    text-decoration: none;
+    color: var(--colorTwo);
+}
+
+.contacts-section section div  p{
+    font-size: 2.0rem;
+    line-height: 3rem;
+    font-weight: 200;
+    color: var(--colorTwo);
+}
+
+.contacts-section section div address{
+    font-size: 2.0rem;
+    line-height: 3rem;
+    font-weight: 200;
+    color: var(--colorTwo);
+}
+
+/******************************************
+/* Footer
+/*******************************************/
+.footer {
+    width: 100%;
+    height: 252px;
+    padding-top: 63px;
+    background: rgb(0,43,53);
+    color: #71A1AE;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.footer-section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.footer-section1 div p {
+    font-size: 1.5rem;
+    font-family: "Arimo";
+    font-weight: 200;    
+}
+
+.footer-section2  > div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+.footer-nav { 
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-nav li {
+    list-style: none;
+}
+
+.footer-nav li a {
+    text-decoration: none;
+    font-family: "Arimo";
+    font-size: 1.5rem;
+    color: #71A1AE;
+}
+
+.ionicon {
+    color: var(--colorSix);
+    color: #71A1AE;
+    font-size: 2rem;
+}
+
+.ionicon:hover {
+    color: var(--colorEleven);
+}
+
+/******************************************
+/* Media Queries
+/*******************************************/
+
+/* Desktop screens */
+
+@media  screen and (max-width:1200px) {
+    .top-header {
+        max-width: 980px;
+    }
+
+    .navigation {
+        max-width: 980px;
+    }
+
+    .nav-list {
+        gap: 10px;
+    }
+
+    .hero-section > div {
+        max-width: 980px;
+    }
+
+    .big-container {
+        max-width: 980px;
+    }
+
+    .appointment-container {
+        max-width: 980px;
+    }
+
+    .appointment-box {
+        max-width: 504px;
+    }
+    
+    .appointment-form {
+        max-width: 444px;
+    }
+
+    .form-box input {
+        width: 404px;
+    }
+
+    .form-box select {
+        width: 404px;
+    }
+
+    .about-section article div {
+        max-width: 355.5px;
+    }
+
+    .review-container {
+        max-width: 828px;
+    }
+
+    .swiper-slide div {
+        max-width: 294px;
+        height: 207.83px;
+    }
+
+    .patient-care-section {
+        padding-top: 40px;
+    }
+
+    .patient-care-container {
+        max-width: 970px;
+    }
+
+    .swiper-slide img {
+        height: 207px;
+        width: 294px;
+        object-fit: cover;
+    }
+
+    .meet-drs-container {
+        max-width: 965px;
+    }
+
+    .meet-drs-container  article img {
+        width: 177.59px;
+        height: 177.59px;
+    }
+
+    .sign-in-article div {
+        max-width: 457.75px;
+    }
+
+    .latest-news-container {
+        max-width: 965px;
+    }
+
+    .latest-news-container img{
+        width: 160.3;
+        height: 160.3;
+    }
+
+    .appointments-section div {
+        max-width: 871.06px;
+    }
+
+    .footer-container {
+        max-width: 965px;
+    }
+
+    .footer-section1 div p {
+        width: 329px;
+    }
+
+} 
+
+/* Laptop */
+
+@media  screen and (max-width:1024px) {
+    /* Top Header */
+    .top-header {        
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        width: fit-content;
+        height: fit-content;
+        max-width: 800px;
+        padding: 20px;
+        gap: 30px;
+        display: none;
+        z-index: 1;
+    }
+
+    .top-header.show {
+        display: flex;
+        z-index: -1;
+    }
+
+    .top-header-box-1 {
+        order: 2;
+        width: 350px;
+        max-width: 350px;
+        border: none;
+    }
+
+    .top-header-box-2 {
+        order: 3;
+        width: 350px;
+        max-width: 350px;
+        border: none;
+    }
+
+    .top-header-box-3 {
+        order: 1;
+        width: 400px;
+        max-width: 400px;
+        border: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    #header-toggle-btn {
+        display: block;
+        z-index: 1;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 25px;
+    }
+
+    .close-hamburger {
+        font-size: 25px;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 120px;
+        right: 0;
+        margin: auto;
+        width: 20%;
+        height: fit-content;
+        padding: 30px 16px;
+        border-radius: 0 0 20px 20px;
+        background: var(--colorTwo);
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        justify-content: none;
+        display: none;
+    }
+
+    .navigation-header {
+        padding: 0;
+    }
+
+    .navigation {
+        width: 100%;
+        max-width: none;
+        padding: inherit;
+    }
+
+    .padding-side {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .services-container {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .services-container section {
+        width: 260px;
+    }
+
+    .big-section article h3 {
+        font-size: 2.8rem;
+    }
+
+    .swiper-slide div {
+        max-width: 303px;
+        height: 214.19px;
+    }
+
+    .appointment-container {
+        flex-wrap: nowrap;
+    }
+
+    .appointment-box {
+        padding: 39px 20px 39px 0;
+    }
+
+    .about-section {
+        height: 800px;
+    }
+
+    .latest-news-section {
+        height: 2350px;
+    }
+
+    .latest-news-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .latest-news-container img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .latest-news-container > article {
+        width: 100%;
+        max-width: 713px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .latest-news-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 16px;
+    }
+
+    .latest-news-box p {
+        text-align: center;
+    }
+
+    .latest-news-box a {
+        text-align: center;
+    }
+    
+    .contacts-section section {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .contacts-section section div {
+        padding: 0px 0px;
+        width: 320px;
+    }
+
+    .footer-section1 div {
+        padding: 0 16px;
+    }
+
+    .footer-section2 div {
+        padding: 0 16px;
+    }
+
+    .footer-section1 div + div p {
+        text-align: center;
+    }
+    
+
+}
+
+/* tablet */
+
+@media  screen and (max-width:768px) {
+
+    .top-header-box-1 {
+        width: 350px;
+        max-width: 350px;
+    }
+
+    .top-header-box-2 {
+        width: 284.56px;
+        max-width: 284.56px;
+    }
+
+    .top-header-box-3 {
+        width: 344.97px;
+        max-width: 344.97px;
+    }
+
+    .navigation-header {
+        height: fit-content;
+        padding: 20px 0;
+        height: 30vh;
+        position: relative;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .hamburger {
+        order: 4;
+    }
+
+    .close-hamburger {
+        order: 3;
+    }
+
+    .nav-menu .nav-list-btn {
+        display: block;
+        order: 2;
+    }
+
+    .nav-list {
+        top: 243px;
+        right: 0;
+        width: 50%;
+        padding-left: 30px;
+    }
+
+    .big-container {
+        flex-direction: column;
+    }
+
+    .big-section article h3 {
+        font-size: 2.8rem;
+    }
+
+    .big-section article {
+        max-width: 694px;
+        height: 310px;
+    }
+
+    .appointment-container {
+        flex-wrap: wrap;
+    }
+
+    .appointment-box {
+        max-width: 713px;
+    }
+    
+    .appointment-form {
+        max-width: 713px;
+    }
+
+    .form-box input {
+        width: 586px;
+    }
+    
+    .form-box select {
+        width: 586px;
+    }
+
+    .services-container section {
+        width: 464px;
+    }
+
+    .about-section {
+        width: 100%;
+        height: 100%;
+        min-height: 640px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .about-section section {
+        width: 100%;
+        height: 520px;
+    }
+    
+    .about-section article {
+        width: 100%;
+    }
+
+    .review-section {
+        height: 100%;
+        min-height: 200px;
+        padding: 30px 0;
+        margin-bottom: 0px;
+    }
+    .review-container {
+        max-width: 627px;
+    }
+
+    .patient-care-section {
+        padding-top: 20px;
+    }
+
+    .swiper-slide div {
+        max-width: 217px;
+        height: 153.39px;
+    }
+
+    .meet-drs-section {
+        height: 1796.42px;
+        padding: 0 16px;
+    }
+
+    .meet-drs-container {
+        flex-direction: column;
+        gap: 20px;
+        max-width: 965px;
+    }
+
+    .meet-drs-container  article p {
+        max-width: 670px;
+    }
+
+    .meet-drs-container  article img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .sign-in-section {
+        height: 403.09px;
+        flex-direction: column;
+    }
+    
+    .sign-in-article {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .sign-in-article  > div {
+        max-width: 712px;
+    }
+
+    .form-container .email-input{
+        width: 100%;
+        max-width: 712px;
+    }
+
+    .appointments-section div {
+        max-width: 667px;
+    }
+
+    .contacts-section {
+        height: 763px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 16px;
+    }
+    
+    .contacts-section section {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .contacts-section section div{
+        padding: 0px 0px;
+        width: 232px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .contacts-section section div  h3{
+        padding-bottom: 30px;
+    }
+
+    .footer {
+        height: 354px;
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 16px;
+    }
+    
+    .footer-section1  div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .footer-section1 div + div p {
+        width: 100%;
+    }
+    
+    .footer-section2 {
+        padding-top: 30px;
+        align-items: center;
+    }
+    
+}
+
+@media  screen and (max-width:622px) {
+    .swiper-slide div {
+        max-width: 269px;
+        height: 190.14px;
+    }
+}
+
+/* mobile */
+
+@media  screen and (max-width:480px) {
+    #header-toggle-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top-header-box-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navigation-header {
+        padding-top: 0;
+    }
+
+    .nav-logo {
+        padding-top: 20px;
+        width: fit-content;
+        max-width: fit-content;
+    }
+
+    .appointment-box {
+        width: 100%;
+    }
+
+    .latest-news-section {
+        height: 2350px;
+    }
+    .meet-drs-section {
+        height: 1900px;
+    }
+
+    .sign-in-section {
+        height: fit-content;
+    }
+
+    .latest-news-box a {
+        text-align: center;
+    }
+
+    .footer-section1 div + div p {
+    text-align: center;
+    }
+}
